@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83DF2586-3771-4584-B3C0-1B25BDF7F8BA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Acrux.Html</RootNamespace>
+    <AssemblyName>Acrux.Html</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/System.Html/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\System.Html.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Acrux.Html.XML</DocumentationFile>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Setup|AnyCPU' ">
+    <OutputPath>bin\Setup\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Profiling|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Profiling\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PROFILING, PROFILING2, PROFILING3</DefineConstants>
+    <DocumentationFile>bin\Debug\System.Html.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'TrialVersion|AnyCPU' ">
+    <OutputPath>bin\TrialVersion\</OutputPath>
+    <DefineConstants>TRACE;TRIAL</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <DocumentationFile>bin\TrialVersion\Acrux.Html.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Unit Tests|AnyCPU' ">
+    <OutputPath>bin\Unit Tests\</OutputPath>
+    <DefineConstants>TRACE;UNITTESTS</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\Acrux.Html.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DebugHelper.cs" />
+    <Compile Include="HtmlParserSettings.cs" />
+    <Compile Include="HtmlPtrPredicateParser.cs" />
+    <Compile Include="Specialized\AcruxHtmlStructureFixups.cs" />
+    <Compile Include="Specialized\AttributeDictionary.cs" />
+    <Compile Include="CharacterClasses.cs" />
+    <Compile Include="Specialized\FirefoxHtmlStructureFixups.cs" />
+    <Compile Include="Specialized\HtmlNetscape\Factory.cs" />
+    <Compile Include="Specialized\HtmlNetscape\ServerScript.cs" />
+    <Compile Include="Specialized\HtmlProprietary\Factory.cs" />
+    <Compile Include="Specialized\HtmlProprietary\NoLineBreak.cs" />
+    <Compile Include="Specialized\HtmlProprietary\WordLineBreak.cs" />
+    <Compile Include="Specialized\HtmlEndTag.cs" />
+    <Compile Include="HtmlNodeStack.cs" />
+    <Compile Include="Specialized\HtmlNodeFixup.cs" />
+    <Compile Include="Specialized\HtmlProcessingInstruction.cs" />
+    <Compile Include="Reflector.cs" />
+    <Compile Include="Specialized\Html401\AbbreviatedForm.cs" />
+    <Compile Include="Specialized\Html401\Acronym.cs" />
+    <Compile Include="Specialized\Html401\Address.cs" />
+    <Compile Include="Specialized\Html401\Anchor.cs" />
+    <Compile Include="HtmlAttribute.cs" />
+    <Compile Include="Specialized\HtmlAttributeCollection.cs" />
+    <Compile Include="Specialized\HtmlCommentElement.cs" />
+    <Compile Include="Specialized\HtmlDocTypeElement.cs" />
+    <Compile Include="HtmlDocument.cs" />
+    <Compile Include="HtmlElement.cs" />
+    <Compile Include="HtmlNode.cs" />
+    <Compile Include="Specialized\HtmlNodeList.cs" />
+    <Compile Include="HtmlParser.cs" />
+    <Compile Include="HtmlParserException.cs" />
+    <Compile Include="HtmlPredicateParser.cs" />
+    <Compile Include="Specialized\Html401\Applet.cs" />
+    <Compile Include="Specialized\Html401\Area.cs" />
+    <Compile Include="Specialized\Html401\Base.cs" />
+    <Compile Include="Specialized\Html401\BaseFont.cs" />
+    <Compile Include="Specialized\Html401\BidirectionalOverride.cs" />
+    <Compile Include="Specialized\Html401\BigFont.cs" />
+    <Compile Include="Specialized\Html401\BlockQuote.cs" />
+    <Compile Include="Specialized\Html401\Body.cs" />
+    <Compile Include="Specialized\Html401\BoldFont.cs" />
+    <Compile Include="Specialized\Html401\Button.cs" />
+    <Compile Include="Specialized\Html401\Caption.cs" />
+    <Compile Include="Specialized\Html401\Center.cs" />
+    <Compile Include="Specialized\Html401\Citation.cs" />
+    <Compile Include="Specialized\Html401\Code.cs" />
+    <Compile Include="Specialized\Html401\Column.cs" />
+    <Compile Include="Specialized\Html401\ColumnGroup.cs" />
+    <Compile Include="Specialized\Html401\DefiningInstance.cs" />
+    <Compile Include="Specialized\Html401\DefinitionDescription.cs" />
+    <Compile Include="Specialized\Html401\DefinitionList.cs" />
+    <Compile Include="Specialized\Html401\DefinitionTerm.cs" />
+    <Compile Include="Specialized\Html401\DeletedText.cs" />
+    <Compile Include="Specialized\Html401\DirectoryList.cs" />
+    <Compile Include="Specialized\Html401\Div.cs" />
+    <Compile Include="Specialized\Html401\Emphasis.cs" />
+    <Compile Include="Specialized\Html401\Factory.cs" />
+    <Compile Include="Specialized\Html401\Fieldset.cs" />
+    <Compile Include="Specialized\Html401\FieldsetLegend.cs" />
+    <Compile Include="Specialized\Html401\Font.cs" />
+    <Compile Include="Specialized\Html401\Form.cs" />
+    <Compile Include="Specialized\Html401\Frame.cs" />
+    <Compile Include="Specialized\Html401\Frameset.cs" />
+    <Compile Include="Specialized\Html401\Head.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel1.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel2.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel3.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel4.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel5.cs" />
+    <Compile Include="Specialized\Html401\HeadingLevel6.cs" />
+    <Compile Include="Specialized\Html401\HorizontalRule.cs" />
+    <Compile Include="Specialized\Html401\Html.cs" />
+    <Compile Include="Specialized\Html401\IFrame.cs" />
+    <Compile Include="Specialized\Html401\Image.cs" />
+    <Compile Include="Specialized\Html401\ImageMap.cs" />
+    <Compile Include="Specialized\Html401\Input.cs" />
+    <Compile Include="Specialized\Html401\InsertedText.cs" />
+    <Compile Include="Specialized\Html401\Isindex.cs" />
+    <Compile Include="Specialized\Html401\ItalicFont.cs" />
+    <Compile Include="Specialized\Html401\Kbd.cs" />
+    <Compile Include="Specialized\Html401\Label.cs" />
+    <Compile Include="Specialized\Html401\LineBreak.cs" />
+    <Compile Include="Specialized\Html401\Link.cs" />
+    <Compile Include="Specialized\Html401\ListItem.cs" />
+    <Compile Include="Specialized\Html401\MenuList.cs" />
+    <Compile Include="Specialized\Html401\MetaInformation.cs" />
+    <Compile Include="Specialized\Html401\NoFrames.cs" />
+    <Compile Include="Specialized\Html401\NoScript.cs" />
+    <Compile Include="Specialized\Html401\Object.cs" />
+    <Compile Include="Specialized\Html401\OptionGroup.cs" />
+    <Compile Include="Specialized\Html401\OptionSelector.cs" />
+    <Compile Include="Specialized\Html401\OrderedList.cs" />
+    <Compile Include="Specialized\Html401\Paragraph.cs" />
+    <Compile Include="Specialized\Html401\PreformatedText.cs" />
+    <Compile Include="Specialized\Html401\PropertyValue.cs" />
+    <Compile Include="Specialized\Html401\Sample.cs" />
+    <Compile Include="Specialized\Html401\ScriptStatement.cs" />
+    <Compile Include="Specialized\Html401\SelectableChoice.cs" />
+    <Compile Include="Specialized\Html401\ShortQuote.cs" />
+    <Compile Include="Specialized\Html401\SmallFont.cs" />
+    <Compile Include="Specialized\Html401\Span.cs" />
+    <Compile Include="Specialized\Html401\StrikeThroughFont.cs" />
+    <Compile Include="Specialized\Html401\StrikeThroughFontShort.cs" />
+    <Compile Include="Specialized\Html401\StrongFont.cs" />
+    <Compile Include="Specialized\Html401\Style.cs" />
+    <Compile Include="Specialized\Html401\SubScript.cs" />
+    <Compile Include="Specialized\Html401\SuperScript.cs" />
+    <Compile Include="Specialized\Html401\Table.cs" />
+    <Compile Include="Specialized\Html401\TableBody.cs" />
+    <Compile Include="Specialized\Html401\TableCell.cs" />
+    <Compile Include="Specialized\Html401\TableFooter.cs" />
+    <Compile Include="Specialized\Html401\TableHead.cs" />
+    <Compile Include="Specialized\Html401\TableHeaderCell.cs" />
+    <Compile Include="Specialized\Html401\TableRow.cs" />
+    <Compile Include="Specialized\Html401\TeletypeFont.cs" />
+    <Compile Include="Specialized\Html401\TextArea.cs" />
+    <Compile Include="Specialized\Html401\Title.cs" />
+    <Compile Include="Specialized\Html401\UnderlinedFont.cs" />
+    <Compile Include="Specialized\Html401\UnorderedList.cs" />
+    <Compile Include="Specialized\Html401\Variable.cs" />
+    <Compile Include="Specialized\HtmlTextElement.cs" />
+    <Compile Include="Specialized\IHtmlNodeReferenceHolder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HtmlTagAttributesMapperAttribute.cs" />
+    <Compile Include="Specialized\XmlRefAttribute.cs" />
+    <Compile Include="Specialized\XmlRefComment.cs" />
+    <Compile Include="Specialized\XmlRefDocumentType.cs" />
+    <Compile Include="Specialized\XmlRefElement.cs" />
+    <Compile Include="Specialized\XmlRefProcessingInstruction.cs" />
+    <Compile Include="Specialized\XmlRefText.cs" />
+    <Compile Include="Specialized\XmlRefXmlDeclaration.cs" />
+    <Compile Include="TableContext.cs" />
+    <Compile Include="XPath\HtmlXsltContext.cs" />
+    <Compile Include="XPath\XPath2Functions.cs" />
+    <Compile Include="XPath\XsltContextFunctionBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Specialized\HtmlMicrosoft\" />
+    <Folder Include="Specialized\HtmlSun\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
